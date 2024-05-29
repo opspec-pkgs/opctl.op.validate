@@ -1,5 +1,7 @@
 [![Build Status](https://github.com/opspec-pkgs/opctl.op.validate/workflows/build/badge.svg?branch=main)](https://github.com/opspec-pkgs/opctl.op.validate/actions?query=workflow%3Abuild+branch%3Amain)
 
+<img src="icon.svg" alt="icon" height="100px">
+
 # Problem statement
 
 Validates an [opctl](https://opctl.io) op
