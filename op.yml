@@ -1,0 +1,22 @@
+description: Validates an [opctl](https://opctl.io) op
+name: github.com/opspec-pkgs/opctl.op.validate
+inputs:
+  opctlVersion:
+    string:
+      description: The version of opctl to use for validating the op.
+      constraints:
+        format: semver
+  op:
+    dir:
+      description: The op to be validated (directory must contain an op.yml).
+run:
+  container:
+    cmd:
+      - sh
+      - -ce
+      - opctl op validate /op
+    image:
+      ref: opctl/opctl:$(opctlVersion)-dind
+    dirs:
+      /op: $(op)
+version: 1.0.0
